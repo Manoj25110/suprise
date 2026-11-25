@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A special birthday surprise made with love ❤️">
+<title>Happy Birthday My Love ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <div class="login-box">
+        <div class="login-heart">❤️</div>
+
+        <h1>Private Surprise</h1>
+        <p>Only one special person can enter 💌</p>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Open My Surprise 💕</button>
+
+        <p id="loginError"></p>
+    </div>
+</div>
+<div id="heart-container"></div>
+<audio id="bgMusic" loop><source src="WhatsApp Audio 2026-10-01 at 7.57.00 PM.mpeg" type="audio/mpeg"></audio>
+<button id="musicButton" class="music-button" title="Play music">🎵</button>
+
+<section id="openingScreen" class="opening-screen">
+  <div class="opening-content">
+    <div class="small-heart">❤️</div>
+    <p class="opening-small">I made something special for you...</p>
+    <h1>Hey <span id="openingName">My Love</span> 💕</h1>
+    <p class="opening-text">There is a little surprise waiting for you.</p>
+    <button id="openSurprise" class="main-button">Open Your Surprise 💝</button>
+    <p class="tiny-text">Promise me you'll stay until the end... 🥺❤️</p>
+  </div>
+</section>
+
+<main id="mainContent" class="hidden">
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="eyebrow">✨ A special day for someone special ✨</p>
+    <h1>Happy Birthday,<span id="heroName">My Love</span> ❤️</h1>
+    <p class="hero-subtitle">Today the world celebrates the day an incredibly beautiful soul was born.</p>
+    <div class="birthday-date" id="birthdayDate">🎂 Your Special Day 🎂</div>
+    <button class="scroll-button" onclick="scrollToSection('story')">Our Story ↓</button>
+  </div>
+</section>
+
+<section class="message-section">
+  <div class="section-container">
+    <span class="section-label">A LITTLE MESSAGE 💌</span>
+    <h2>You make my world <span>more beautiful.</span></h2>
+    <p class="large-message">Some people come into our lives and quietly become one of the most important parts of it. You are that person for me.</p>
+    <div class="heart-divider"><span>♡</span><span>♥</span><span>♡</span></div>
+  </div>
+</section>
+
+<section id="story" class="story-section">
+  <div class="section-container">
+    <span class="section-label">OUR JOURNEY 💕</span>
+    <h2>Our Little Story</h2>
+    <p class="section-intro">Every memory with you is a page in my favorite story.</p>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-dot">❤️</div><div class="timeline-card"><span>CHAPTER 01</span><h3>The Day We Met</h3><p>This was the beginning of something I didn't know would become so special.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">💬</div><div class="timeline-card"><span>CHAPTER 02</span><h3>Our First Conversations</h3><p>Somehow our conversations became something I always looked forward to.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">🥰</div><div class="timeline-card"><span>CHAPTER 03</span><h3>The Memories</h3><p>The laughs, the silly moments, the little things — all became unforgettable.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">💖</div><div class="timeline-card"><span>CHAPTER 04</span><h3>And Here We Are</h3><p>And somehow, my favorite chapter is still the one we're writing right now.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="section-container">
+    <span class="section-label">MEMORIES 📸</span>
+    <h2>💕 Eight Moments, Infinite Love</h2>
+    <p class="section-intro">Her smile, my happiness. ✨</p>
+    <div class="gallery">
+      <div class="photo-card" onclick="openPhoto(1)"><img src="photo1.jpeg" alt="Memory 1"><div class="photo-overlay"><span> ❤️</span></div></div>
+      <div class="photo-card" onclick="openPhoto(2)"><img src="photo2.jpeg" alt="Memory 2"><div class="photo-overlay"><span> ❤️</span></div></div>
+      <div class="photo-card" onclick="openPhoto(3)"><img src="photo3.jpeg" alt="Memory 3"><div class="photo-overlay"><span> ❤️</span></div></div>
+      <div class="photo-card" onclick="openPhoto(4)"><img src="photo4.jpeg" alt="Memory 4"><div class="photo-overlay"><span> ❤️</span></div></div>
+      <div class="photo-card" onclick="openPhoto(5)"><img src="photo5.jpeg" alt="Memory 5"><div class="photo-overlay"><span> ❤️</span></div></div>
+      <div class="photo-card" onclick="openPhoto(6)"><img src="photo6.jpeg" alt="Memory 6"><div class="photo-overlay"><span> ❤️</span></div></div>
+      <div class="photo-card" onclick="openPhoto(7)"><img src="photo7.jpeg" alt="Memory 7"><div class="photo-overlay"><span> ❤️</span></div></div>
+      <div class="photo-card" onclick="openPhoto(8)"><img src="photo8.jpeg" alt="Memory 8"><div class="photo-overlay"><span> ❤️</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div id="photoModal" class="photo-modal">
+  <button class="close-modal" onclick="closePhoto()">×</button>
+  <img id="modalImage" src="" alt="Memory">
+  <div id="modalCaption" class="modal-caption"></div>
+</div>
+
+<section class="reasons-section">
+  <div class="section-container">
+    <span class="section-label">JUST BECAUSE ❤️</span>
+    <h2>Reasons I Love You</h2>
+    <p class="section-intro">My words could never be enough for you. 🥹</p>
+    <div class="reasons-grid">
+      <div class="reason-card"><div class="reason-icon">😊</div><h3>Your Smile</h3><p>Your smile can instantly make a bad day feel better.</p></div>
+      <div class="reason-card"><div class="reason-icon">😂</div><h3>Your Laugh</h3><p>Your laugh is one of my favorite sounds in the world.</p></div>
+      <div class="reason-card"><div class="reason-icon">❤️</div><h3>Your Heart</h3><p>You have such a beautiful and caring heart.</p></div>
+      <div class="reason-card"><div class="reason-icon">🥰</div><h3>The Little Things</h3><p>It's all the little things you do that make you special.</p></div>
+      <div class="reason-card"><div class="reason-icon">✨</div><h3>Your Presence</h3><p>Somehow everything feels a little better when you're around.</p></div>
+      <div class="reason-card"><div class="reason-icon">💗</div><h3>Just You</h3><p>I don't need a reason. I love you simply because you're you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="letter-section">
+  <div class="letter-container">
+    <div class="envelope-icon">💌</div>
+    <span class="section-label">FROM MY HEART</span>
+    <h2>A Letter For You</h2>
+    <div class="letter-paper">
+      <p class="letter-greeting">My Love,</p>
+      <p id="loveLetter"></p>
+      <p class="letter-sign">With all my love, ❤️<br><span id="yourName">Prithvika A</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="music-section">
+  <div class="music-card">
+    <div class="vinyl"><div class="vinyl-center">❤️</div></div>
+    <div class="music-info">
+      <span> SONG 🎵</span>
+      <h2 id="songTitle">SpecialSong</h2>
+      <p id="songArtist">A song that reminds me of you</p>
+      <button id="musicPlayButton" class="music-play">▶ Play Song</button>
+    </div>
+  </div>
+</section>
+
+<section class="cake-section">
+  <div class="section-container">
+    <span class="section-label">MAKE A WISH ✨</span>
+    <h2>One Little Birthday Wish</h2>
+    <p class="section-intro">Close your eyes, make a wish, and blow out the candles.</p>
+    <div class="cake-area">
+      <div class="cake">
+        <div class="candle candle1"><div class="flame"></div></div>
+        <div class="candle candle2"><div class="flame"></div></div>
+        <div class="candle candle3"><div class="flame"></div></div>
+        <div class="cake-top"></div>
+        <div class="cake-body"><div class="cake-decoration"></div><div class="cake-decoration"></div><div class="cake-decoration"></div></div>
+        <div class="cake-plate"></div>
+      </div>
+      <button id="blowCandles" class="main-button">Blow Out The Candles 🕯️</button>
+      <p id="wishMessage" class="wish-message hidden">Your wish has been sent to the universe... ✨❤️</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-section">
+  <div class="final-content">
+    <span class="section-label">ONE LAST THING...</span>
+    <h2>Before You Go...</h2>
+    <p class="final-message">I may not be able to give you the whole world, but I promise I'll always try to make your little world happier.</p>
+    <button id="lastSurprise" class="main-button">One Last Surprise 💝</button>
+    <div id="hiddenMessage" class="hidden-message">
+      <div class="big-heart">❤️</div>
+      <h1>Happy Birthday, <span id="finalName">My Love</span>!</h1>
+      <p>You are one of the most beautiful chapters of my life.</p>
+      <p>And I hope our story has many, many more chapters to come.</p>
+      <div class="forever">❤️ Forever & Always ❤️</div>
+    
+      <p class="signature">— <span id="finalYourName">Prithvika A</span></p>
+      <div class="forever">And last thing to say you </br>~ I Love You ❤️</div>
+    </div>
+  </div>
+</section>
+
+<footer>Made with ❤️ My Love <span id="footerName"></span></footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

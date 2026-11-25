@@ -1,0 +1,69 @@
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:"Montserrat",sans-serif;background:#fff5f8;color:#3d2430;overflow-x:hidden
+}
+button{font-family:inherit;cursor:pointer}img{max-width:100%;display:block}:root{--pink:#ff4f81;--dark-pink:#d6336c;--light-pink:#ffe4ed;--rose:#ff8fab;--purple:#8b5cf6;--dark:#24141b;--white:#fff;--text:#543642;--shadow:0 20px 50px rgba(170,45,90,.15)}#heart-container{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}.floating-heart{position:absolute;bottom:-50px;font-size:20px;opacity:.5;animation:floatHeart linear forwards}@keyframes floatHeart{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.6}100%{transform:translateY(-110vh) rotate(360deg);opacity:0}}.opening-screen{position:fixed;inset:0;z-index:999;display:flex;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at 30% 30%,#ff9ebc55,transparent 30%),radial-gradient(circle at 70% 70%,#a78bfa55,transparent 30%),linear-gradient(135deg,#240914,#4c1028,#26102f);color:#fff;transition:1s ease}.opening-screen.hide{opacity:0;visibility:hidden;transform:scale(1.1)}.opening-content{max-width:700px;padding:30px;animation:openingAppear 1.5s ease}@keyframes openingAppear{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.small-heart{font-size:70px;animation:heartbeat 1.4s infinite}@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}.opening-small{margin-top:20px;letter-spacing:3px;text-transform:uppercase;font-size:12px;opacity:.8}.opening-content h1{font-family:"Dancing Script",cursive;font-size:clamp(50px,9vw,90px);margin:10px 0}.opening-text{font-size:17px;opacity:.85;margin-bottom:35px}.tiny-text{font-size:12px;margin-top:20px;opacity:.6}.main-button{border:none;padding:16px 30px;border-radius:50px;color:#fff;background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 10px 30px rgba(255,79,129,.3);font-weight:600;font-size:14px;transition:.3s ease}.main-button:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 15px 35px rgba(255,79,129,.4)}.main-button:active{transform:scale(.97)}.music-button{position:fixed;top:20px;right:20px;width:50px;height:50px;border-radius:50%;border:1px solid #ffffff55;background:#ffffffaa;backdrop-filter:blur(10px);font-size:20px;z-index:100}.hidden{display:none!important}#mainContent{position:relative;z-index:2}.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 20%,#ff8fab66,transparent 30%),radial-gradient(circle at 80% 80%,#8b5cf666,transparent 30%),linear-gradient(135deg,#fff0f5,#f9edff)}.hero::before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#ff6f9f22;filter:blur(20px)}.hero-content{max-width:900px;padding:30px;position:relative;z-index:2}.eyebrow,.section-label{color:var(--pink);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase}.hero h1{font-family:"Dancing Script",cursive;font-size:clamp(60px,11vw,120px);line-height:.95;margin:25px 0;color:#351522}.hero h1 span{display:block;color:var(--pink)}.hero-subtitle{max-width:600px;margin:auto;font-size:17px;line-height:1.8;color:#704452}.birthday-date{display:inline-block;margin-top:30px;padding:12px 22px;border-radius:50px;background:#fff;box-shadow:var(--shadow);color:var(--dark-pink);font-size:13px;font-weight:600}.scroll-button{display:block;margin:40px auto 0;border:none;background:none;color:var(--pink);font-weight:600}section{padding:110px 20px}.section-container{width:min(1100px,100%);margin:auto;text-align:center}section h2{font-family:"Dancing Script",cursive;font-size:clamp(45px,7vw,75px);color:#3a1e2a;margin:15px 0}.section-intro{max-width:600px;margin:auto;color:#7b5965;line-height:1.8}.message-section{background:#fff}.large-message{max-width:750px;margin:35px auto;font-size:22px;line-height:1.9;color:#704452}.heart-divider{display:flex;justify-content:center;gap:15px;color:var(--pink);font-size:25px}.story-section{background:linear-gradient(180deg,#fff5f8,#ffeef5)}.timeline{max-width:800px;margin:70px auto 0;position:relative}.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--pink),var(--purple));transform:translateX(-50%)}.timeline-item{width:50%;padding:20px;position:relative}.timeline-item:nth-child(even){margin-left:50%}.timeline-dot{position:absolute;width:42px;height:42px;background:#fff;border-radius:50%;display:grid;place-items:center;box-shadow:0 5px 20px #ff4f8133;top:30px;right:-21px;z-index:2}.timeline-item:nth-child(even) .timeline-dot{left:-21px}.timeline-card{padding:30px;background:#ffffffdd;border-radius:20px;text-align:left;box-shadow:var(--shadow);transition:.3s ease}.timeline-card:hover{transform:translateY(-5px)}.timeline-card span{color:var(--pink);font-size:10px;font-weight:700;letter-spacing:2px}.timeline-card h3{margin:10px 0;font-family:"Dancing Script",cursive;font-size:30px}.timeline-card p{color:#775762;line-height:1.7;font-size:14px}.gallery-section{background:#fff}.gallery{margin-top:60px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.photo-card{aspect-ratio:1/1;position:relative;overflow:hidden;border-radius:20px;cursor:pointer;box-shadow:var(--shadow);transform:rotate(var(--rotation));transition:.4s ease}.photo-card:nth-child(odd){--rotation:-1deg}.photo-card:nth-child(even){--rotation:1deg}.photo-card:hover{transform:rotate(0) translateY(-8px) scale(1.02)}.photo-card img{width:100%;height:100%;object-fit:cover;transition:.5s ease}.photo-card:hover img{transform:scale(1.1)}.photo-overlay{position:absolute;inset:auto 0 0 0;padding:30px 15px 15px;background:linear-gradient(transparent,#000a);color:#fff;font-size:12px}.photo-modal{position:fixed;inset:0;background:#12070dcc;backdrop-filter:blur(15px);display:none;justify-content:center;align-items:center;flex-direction:column;z-index:1000;padding:30px}.photo-modal.active{display:flex}.photo-modal img{max-width:min(900px,95vw);max-height:75vh;object-fit:contain;border-radius:15px;box-shadow:0 20px 70px #0006}.close-modal{position:absolute;top:25px;right:30px;background:none;border:none;color:#fff;font-size:45px;cursor:pointer}.modal-caption{color:#fff;margin-top:20px;font-family:"Dancing Script",cursive;font-size:28px}.reasons-section{background:linear-gradient(135deg,#fff1f5,#f4edff)}.reasons-grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.reason-card{padding:35px 25px;background:#ffffffaa;border:1px solid #fff;backdrop-filter:blur(15px);border-radius:25px;transition:.3s ease}.reason-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}.reason-icon{font-size:42px;margin-bottom:15px}.reason-card h3{font-family:"Dancing Script",cursive;font-size:30px;margin-bottom:10px}.reason-card p{color:#775762;font-size:14px;line-height:1.7}.letter-section{background:linear-gradient(135deg,#3b1324,#24102e);color:#fff}.letter-section h2{color:#fff}.letter-container{width:min(850px,100%);margin:auto;text-align:center}.envelope-icon{font-size:55px;margin-bottom:20px}.letter-paper{margin-top:50px;padding:55px;border-radius:5px;background:linear-gradient(135deg,#fffaf3,#fff4f7);color:#4b2935;box-shadow:0 30px 80px #00000055;text-align:left;position:relative}.letter-paper:before{content:"♥";position:absolute;top:20px;right:25px;color:#ff8fab;font-size:20px}.letter-greeting,.letter-sign{font-family:"Dancing Script",cursive;font-size:28px}#loveLetter{min-height:180px;margin:25px 0;line-height:2;font-size:16px;white-space:pre-line}.letter-sign{text-align:right}.music-section{background:#fff5f8;display:flex;justify-content:center}.music-card{width:min(850px,100%);padding:40px;display:flex;align-items:center;gap:45px;border-radius:30px;background:linear-gradient(135deg,#fff,#ffeaf2);box-shadow:var(--shadow)}.vinyl{width:180px;height:180px;flex-shrink:0;border-radius:50%;background:repeating-radial-gradient(circle,#24141b 0,#24141b 5px,#38202a 6px,#24141b 8px);display:grid;place-items:center;animation:spin 8s linear infinite;animation-play-state:paused}.vinyl.playing{animation-play-state:running}@keyframes spin{to{transform:rotate(360deg)}}.vinyl-center{width:55px;height:55px;border-radius:50%;background:var(--pink);display:grid;place-items:center;font-size:22px}.music-info{text-align:left}.music-info>span{font-size:10px;color:var(--pink);letter-spacing:3px;font-weight:700}.music-info h2{margin:10px 0;font-family:"Dancing Script",cursive;font-size:45px}.music-info p{color:#775762;margin-bottom:20px}.music-play{border:none;padding:12px 20px;border-radius:30px;background:var(--pink);color:#fff;font-weight:600}.cake-section{background:#fff;text-align:center}.cake-area{margin-top:70px}.cake{width:250px;margin:0 auto 50px;position:relative}.cake-body{width:230px;height:110px;margin:auto;border-radius:10px 10px 25px 25px;background:linear-gradient(#ff8fab,#ff5f8a);position:relative;box-shadow:0 20px 30px #ff4f8133}
+.cake-body:before{content:"";position:absolute;top:-18px;left:0;width:230px;height:35px;border-radius:50%;background:#fff0f5}.cake-top{position:absolute;top:20px;left:20px;width:210px;height:40px;background:#fff0f5;border-radius:50%;z-index:2}.cake-decoration{width:15px;height:15px;background:#fff;border-radius:50%;position:absolute;bottom:20px}.cake-decoration:nth-child(1){left:45px}.cake-decoration:nth-child(2){left:105px}.cake-decoration:nth-child(3){right:45px}.cake-plate{width:280px;height:20px;background:#f0d7df;border-radius:50%;margin-left:-15px;margin-top:-5px}.candle{width:15px;height:60px;position:absolute;top:-40px;z-index:5;background:repeating-linear-gradient(45deg,#fff 0,#fff 8px,#ff8fab 8px,#ff8fab 15px);border-radius:5px}.candle1{left:70px}.candle2{left:118px}.candle3{right:70px}.flame{position:absolute;width:16px;height:25px;top:-25px;left:-1px;border-radius:50%;background:radial-gradient(circle at 50% 70%,#fff 0 15%,#ffd166 20% 50%,#ff6b35 55%);animation:flame .5s infinite alternate}@keyframes flame{from{transform:scale(1)}to{transform:scale(1.15) rotate(2deg)}}.flame.off{display:none}.wish-message{margin-top:30px;font-family:"Dancing Script",cursive;font-size:35px;color:var(--pink);animation:wishAppear 1s ease}@keyframes wishAppear{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}.final-section{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at center,#722044,#210914 70%);color:#fff}.final-content{max-width:800px;padding:40px;position:relative;z-index:2}.final-section h2{color:#fff;font-size:clamp(55px,8vw,90px)}.final-message{max-width:600px;margin:30px auto;line-height:2;font-size:18px;color:#f8dce6}.hidden-message{margin-top:70px;animation:finalReveal 1.5s ease}@keyframes finalReveal{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}.big-heart{font-size:70px;animation:heartbeat 1.3s infinite}.hidden-message h1{font-family:"Dancing Script",cursive;font-size:clamp(50px,8vw,85px);margin:20px 0;color:#ff8fab}.hidden-message h1 span{color:#fff}.hidden-message p{color:#f8dce6;font-size:17px;line-height:1.8}.forever{margin:35px 0;font-family:"Dancing Script",cursive;font-size:32px;color:#ff8fab}.signature{font-family:"Dancing Script",cursive;font-size:28px!important}footer{padding:25px;text-align:center;background:#18080e;color:#c89daa;font-size:12px}footer span{color:#ff8fab}.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:translateY(0)}@media(max-width:800px){section{padding:80px 18px}.gallery{grid-template-columns:repeat(2,1fr)}.reasons-grid{grid-template-columns:repeat(2,1fr)}.timeline:before{left:20px}.timeline-item,.timeline-item:nth-child(even){width:100%;margin-left:0;padding-left:55px}.timeline-dot,.timeline-item:nth-child(even) .timeline-dot{left:-1px;right:auto}.music-card{flex-direction:column;text-align:center}.music-info{text-align:center}.letter-paper{padding:35px 25px}}@media(max-width:550px){.hero h1{font-size:65px}.gallery{grid-template-columns:1fr 1fr;gap:10px}.reasons-grid{grid-template-columns:1fr}.vinyl{width:140px;height:140px}.music-card{padding:30px 20px}.letter-paper{padding:30px 20px}#loveLetter{font-size:14px}.cake{transform:scale(.85)}}
+.login-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #c471ed);
+}
+
+.login-box {
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(255,255,255,0.95);
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.login-heart {
+    font-size: 60px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.login-box h1 {
+    color: #d6336c;
+}
+
+.login-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #d6336c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#loginError {
+    color: #d6336c;
+    margin-top: 15px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
